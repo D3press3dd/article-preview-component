@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/3-column-card-component-tipMVkiKx)
-- Live Site URL: [Live Preview](https://anthony-preview-card-component.netlify.app/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-article-preview-component-7acDGxLHE)
+- Live Site URL: [Live Preview](https://article-preview-component-anthony-rosman.netlify.app/)
 
 ### Built with
 
