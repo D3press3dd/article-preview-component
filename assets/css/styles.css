@@ -1,0 +1,203 @@
+:root {
+  --dark-gray: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --grayish-blue-light: hsl(210, 46%, 95%);
+  --two-miliseconds: all 0.2s;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  background-color: var(--grayish-blue-light);
+}
+
+h1::selection,
+p::selection {
+  background: hsl(161deg 40% 27%);
+  color: #fff;
+}
+
+.container {
+  background-color: #fff;
+  margin: 15% 2rem 2rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-info {
+  padding: 4rem 4rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-info .text {
+  margin-bottom: 2rem;
+}
+
+.main-text {
+  color: var(--dark-gray);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.text {
+  color: var(--dark-gray);
+  font-size: 1.2rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.author img {
+  max-width: 4.8rem;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.author-date {
+  color: var(--grayish-blue);
+}
+
+.share {
+  margin-left: auto;
+}
+
+.share-background {
+  background-color: var(--grayish-blue-light);
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.share img {
+  display: inline-block;
+}
+
+.active {
+  display: flex;
+  padding: 1.5rem 4rem;
+  background-color: var(--dark-gray);
+  border-radius: 0 0 1rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0 2rem;
+
+  opacity: 0;
+
+  transition: var(--two-miliseconds);
+  z-index: -1;
+}
+
+.active p {
+  font-weight: 700;
+  color: var(--grayish-blue);
+  letter-spacing: 0.5rem;
+}
+
+.translate {
+  opacity: 1;
+  transform: translateY(-9.79rem);
+  transition: var(--two-miliseconds);
+}
+
+.share-background-socials {
+  background-color: var(--dark-blue);
+  padding: 1.5rem;
+}
+
+/*! QUERYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY */
+
+@media (min-width: 768px) {
+  .container img {
+    min-height: 100%;
+    width: 100%;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+
+  .card-info .text {
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 25vh 15vw;
+    position: relative;
+  }
+
+  .active {
+    border-radius: 1rem;
+    position: absolute;
+    top: 45rem;
+    right: 10rem;
+  }
+}
+
+@media (min-width: 3840px) {
+  .main-text {
+    font-size: 6.4rem;
+  }
+
+  .text {
+    font-size: 4.8rem;
+  }
+
+  .author {
+    gap: 6rem;
+  }
+
+  .author img {
+    max-width: 24rem;
+  }
+
+  .author-name,
+  .author-date {
+    font-size: 4.8rem;
+  }
+
+  .card-info {
+    padding: 8rem 8rem 4rem 8rem;
+  }
+
+  .card-info .text {
+    margin-bottom: 12rem;
+  }
+}
